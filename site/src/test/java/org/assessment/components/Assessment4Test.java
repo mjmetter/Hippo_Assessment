@@ -9,7 +9,6 @@ import org.junit.Test;
 import javax.jcr.Node;
 import javax.jcr.RepositoryException;
 import javax.jcr.Session;
-import javax.jcr.Value;
 
 public class Assessment4Test {
 
