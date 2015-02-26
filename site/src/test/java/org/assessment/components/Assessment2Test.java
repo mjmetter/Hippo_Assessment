@@ -13,7 +13,7 @@ public class Assessment2Test {
     private Session session;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() throws RepositoryException {
         String repoUrl="rmi://localhost:1099/hipporepository";
         String username="admin";
         char[] password="admin".toCharArray();

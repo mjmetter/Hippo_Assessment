@@ -15,7 +15,7 @@ public class Assessment3Test {
     private Session session;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() throws RepositoryException {
         String repoUrl="rmi://localhost:1099/hipporepository";
         String username="admin";
         char[] password="admin".toCharArray();
@@ -28,7 +28,8 @@ public class Assessment3Test {
     @Test
     public void searchContent() throws RepositoryException {
 //        String xpathQuery = "//*[jcr:contains(.,'fox')]";
-        final String xpathQuery = "//*[jcr:contains(.,'system')]";
+//        final String xpathQuery = "//*[jcr:contains(.,'system')]";
+        final String xpathQuery = "//element(*, hippo:document) ";
         final QueryManager queryManager = session.getWorkspace().getQueryManager();
         final Query query = queryManager.createQuery(xpathQuery, "xpath");
         printResult( query.execute() );
